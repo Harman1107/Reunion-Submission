@@ -1,0 +1,15 @@
+.Link{
+    transition: box-shadow .3s;
+      margin: 10px;
+      padding: 10px;
+      text-decoration: none;
+      border-radius:10px;
+      border: 0px solid #ccc;
+      background: #fff;
+      float: left;
+    }
+    .Link:hover{
+        box-shadow: 0 0 11px rgba(0, 0, 0, 0.2);
+        text-decoration: none;
+        color:#7743DB;
+    }

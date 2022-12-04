@@ -48,9 +48,9 @@ export default function SearchFilters() {
     <Flex bg='gray.100' p='4' justifyContent='center' flexWrap='wrap'>
       {filters?.map((filter) => (
         <Box key={filter.queryName}>
-          <Select onChange={(e) => searchProperties({ [filter.queryName]: e.target.value })} placeholder={filter.placeholder} w='fit-content' p='2' >
+          <Select onChange={(e) => searchProperties({ [filter.queryName]: e.target.value })} placeholder={filter.placeholder} w='fit-content' p='2' borderColor='#7743DB'bg ='#7743DB' color='white'>
             {filter?.items?.map((item) => (
-              <option value={item.value} key={item.value}>
+              <option value={item.value} key={item.value} color='black'>
                 {item.name}
               </option>
             ))}
@@ -58,7 +58,7 @@ export default function SearchFilters() {
         </Box>
       ))}
       <Flex flexDir='column'>
-        <Button onClick={() => setShowLocations(!showLocations)} border='1px' borderColor='gray.200' marginTop='2' >
+        <Button onClick={() => setShowLocations(!showLocations)} border='1px' borderColor='#7743DB' marginTop='2' bg ='#7743DB' color='white' >
           Search Location
         </Button>
         {showLocations && (
@@ -67,7 +67,7 @@ export default function SearchFilters() {
               placeholder='Type Here'
               value={searchTerm}
               w='300px'
-              focusBorderColor='gray.300'
+              focusBorderColor='#7743DB'
               onChange={(e) => setSearchTerm(e.target.value)}
             />
             {searchTerm !== '' && (
@@ -93,7 +93,7 @@ export default function SearchFilters() {
                       setSearchTerm(location.name);
                     }}
                   >
-                    <Text cursor='pointer' bg='gray.200' p='2' borderBottom='1px' borderColor='gray.100' >
+                    <Text cursor='pointer' bg='gray.200' p='2' borderBottom='1px' borderColor='#7743DB' >
                       {location.name}
                     </Text>
                   </Box>
